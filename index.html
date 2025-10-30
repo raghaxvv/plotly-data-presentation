@@ -6,22 +6,28 @@
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
       text-align: center;
+      padding: 40px;
     }
     h1 {
-      color: #333;
-    }
-    #plot {
-      width: 80%;
-      margin: auto;
-      height: 500px;
+      color: #222;
+      margin-bottom: 10px;
     }
     .date {
-      margin-top: 10px;
-      font-size: 16px;
-      color: #666;
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 40px;
+    }
+    #plot {
+      width: 85%;
+      height: 500px;
+      margin: auto;
+      border-radius: 10px;
+      background: white;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -36,8 +42,8 @@
       y: [10, 15, 13, 17, 22],
       mode: 'lines+markers',
       type: 'scatter',
-      marker: { size: 8 },
-      line: { color: '#17BECF' },
+      marker: { size: 8, color: '#17BECF' },
+      line: { color: '#17BECF', width: 2 },
       name: 'Data Series 1'
     };
 
@@ -46,17 +52,17 @@
       y: [16, 5, 11, 9, 15],
       mode: 'lines+markers',
       type: 'scatter',
-      marker: { size: 8 },
-      line: { color: '#7F7F7F' },
+      marker: { size: 8, color: '#7F7F7F' },
+      line: { color: '#7F7F7F', width: 2 },
       name: 'Data Series 2'
     };
 
     const layout = {
-      title: 'Sample Interactive Plot',
+      title: 'Interactive Plotly Graph Example',
       xaxis: { title: 'X-axis' },
       yaxis: { title: 'Y-axis' },
-      plot_bgcolor: '#fafafa',
-      paper_bgcolor: '#fafafa'
+      plot_bgcolor: '#ffffff',
+      paper_bgcolor: '#ffffff'
     };
 
     Plotly.newPlot('plot', [trace1, trace2], layout);
