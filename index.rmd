@@ -1,0 +1,20 @@
+---
+title: "R Markdown Presentation & Plotly"
+author: "Huruy Belay"
+date: "May 16, 2017"
+output: ioslides_presentation
+---
+
+## Airquality dataset
+
+The relationship between Ozone and Temprature with respect to Month and Day
+
+
+```{r,echo=FALSE, message=FALSE, warning=FALSE,comment=FALSE,error=FALSE}
+library(plotly)
+plot_ly(airquality, x = ~ Temp, y = ~ Ozone,  color = ~ as.factor(Month), size = ~ Day, mode="markers")
+```
+
+'Figure 1: Ozone vs Temprature'
+
+## Thank you
